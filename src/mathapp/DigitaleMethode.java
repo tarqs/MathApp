@@ -1,33 +1,29 @@
-import com.example.menuchapter.MenuChapter;
+package mathapp;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * Created by Gebruiker on 13-11-2015.
- */
 public class DigitaleMethode extends JFrame {
-    public DigitaleMethode(){
+    public DigitaleMethode() {
         initUI();
     }
 
-    private void initUI(){
+    private void initUI() {
         createMenuBar();
 
         setTitle("Getal & Ruimte");
-        setSize(300,200);
+        setSize(300, 200);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
-    private void createMenuBar(){
+    private void createMenuBar() {
         JMenuBar menubar = new JMenuBar();
         ImageIcon iconExit = new ImageIcon("exit.png");
 
-        MenuChapter theorie = new MenuChapter();
-        theorie.setMenuChapterName("Theorie");
+        MenuChapter theorie = new MenuChapter("Theorie");
 
         JMenuItem exitMen = new JMenuItem("Exit",iconExit);
         exitMen.setToolTipText("Exit application");
@@ -42,7 +38,6 @@ public class DigitaleMethode extends JFrame {
         theorie.add(exitMen);
         menubar.add(theorie);
         setJMenuBar(menubar);
-
     }
 
     public static void main(String[] args) {
