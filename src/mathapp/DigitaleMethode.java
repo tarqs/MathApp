@@ -1,5 +1,8 @@
 package mathapp;
 
+/**
+ * Created by Gebruiker on 14-11-2015.
+ */
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,7 +17,7 @@ public class DigitaleMethode extends JFrame {
         createMenuBar();
 
         setTitle("Getal & Ruimte");
-        setSize(300, 200);
+        setSize(1080, 720);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
@@ -24,6 +27,7 @@ public class DigitaleMethode extends JFrame {
         ImageIcon iconExit = new ImageIcon("exit.png");
 
         MenuChapter theorie = new MenuChapter("Theorie");
+        MenuChapter oefenen = new MenuChapter("Oefenopgaven");
 
         JMenuItem exitMen = new JMenuItem("Exit",iconExit);
         exitMen.setToolTipText("Exit application");
@@ -37,6 +41,7 @@ public class DigitaleMethode extends JFrame {
 
         theorie.add(exitMen);
         menubar.add(theorie);
+        menubar.add(oefenen);
         setJMenuBar(menubar);
     }
 
